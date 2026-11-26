@@ -20,7 +20,7 @@ VITE_SHOPIFY_API_VERSION=2026-10
 
 Create a **Storefront API public access token** in Shopify and make sure the storefront API has access to products, collections, customer account URLs, metaobjects, and cart writes (`unauthenticated_read_product_listings`, `unauthenticated_read_metaobjects`, `unauthenticated_write_checkouts`, and any customer-account scope Shopify requires). The token is sent by the browser to Shopify and is not an Admin API credential. Never put a Shopify Admin API token or client secret in a `VITE_` variable. The domain can be your `myshopify.com` domain or a storefront domain, without `https://`.
 
-The app validates its configuration on startup and displays the missing variable names. After configuring the store, run `npm run build` for a production build and `npm run preview` to serve it locally. Configure the production host to serve `index.html` for client-side routes such as `/products/:handle` and `/collections/:handle`.
+The app validates its configuration on startup and displays the missing variable names. After configuring the store, run `npm run build` for a production build and `npm run preview` to serve it locally. Deploy the `ui` directory as the Vercel project root; its `vercel.json` rewrites client-side routes such as `/products/:handle` and `/collections/:handle` to `index.html`, so refreshing those pages works.
 
 ## Shopify catalogue setup
 

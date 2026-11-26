@@ -1,7 +1,6 @@
 import PageHeader from '../components/ui/PageHeader.jsx';
 import Reveal from '../components/ui/Reveal.jsx';
 import Process from '../components/home/Process.jsx';
-import TrustStrip from '../components/home/TrustStrip.jsx';
 import CtaBanner from '../components/home/CtaBanner.jsx';
 import { aboutText } from '../data/content.js';
 
@@ -19,7 +18,6 @@ export default function About() {
         </Reveal>
       </section>
       <Process />
-      <TrustStrip />
       <CtaBanner />
     </>
   );

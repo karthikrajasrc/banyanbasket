@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
 import { CartProvider } from './context/CartContext.jsx';
 import { CatalogProvider } from './context/CatalogContext.jsx';
+import { WishlistProvider } from './context/WishlistContext.jsx';
 import AppErrorBoundary from './components/ui/AppErrorBoundary.jsx';
 import ShopifyConfigurationError from './components/ui/ShopifyConfigurationError.jsx';
 import { getShopifyConfigurationError } from './services/shopify/index.js';
@@ -21,10 +22,12 @@ const app = (
         <BrowserRouter>
         <CatalogProvider>
           <CartProvider>
-            <>
-              <App />
-              <Toast />
-            </>
+            <WishlistProvider>
+              <>
+                <App />
+                <Toast />
+              </>
+            </WishlistProvider>
           </CartProvider>
         </CatalogProvider>
         </BrowserRouter>

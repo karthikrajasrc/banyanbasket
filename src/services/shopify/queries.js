@@ -282,6 +282,22 @@ export const CUSTOMER_ACCOUNT_URL_QUERY = `
   }
 `;
 
+export const FOOTER_SHOP_INFO_QUERY = `
+  query FooterShopInfo @inContext(country: US) {
+    shop {
+      contactInformation { title url }
+      privacyPolicy { title url }
+      refundPolicy { title url }
+      shippingPolicy { title url }
+      termsOfService { title url }
+      paymentSettings {
+        acceptedCardBrands
+        supportedDigitalWallets
+      }
+    }
+  }
+`;
+
 export const HOME_PAGE_BANNERS_QUERY = `
   query HomePageBanners($first: Int!, $after: String) @inContext(country: US) {
     metaobjects(type: "home_page_banner", first: $first, after: $after) {

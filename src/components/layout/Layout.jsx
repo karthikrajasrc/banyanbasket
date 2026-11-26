@@ -5,6 +5,7 @@ import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import MobileDrawer from './MobileDrawer.jsx';
 import CartDrawer from './CartDrawer.jsx';
+import CartBar from './CartBar.jsx';
 import BackToTop from '../ui/BackToTop.jsx';
 
 export default function Layout() {
@@ -29,6 +30,7 @@ export default function Layout() {
       <div className={`ov${menu || cart ? ' on' : ''}`} onClick={close} />
       <MobileDrawer open={menu} onClose={close} />
       <CartDrawer open={cart} onClose={close} />
+      <CartBar drawerOpen={cart} onOpen={() => setCart(true)} />
       <BackToTop />
     </>
   );

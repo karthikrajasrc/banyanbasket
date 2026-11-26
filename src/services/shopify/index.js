@@ -1,5 +1,6 @@
 export { getProducts, getFeaturedProducts, getProductByHandle, normalizeProduct } from './productService.js';
 export { getCollections, getCollectionProducts, getCustomerAccountUrl } from './collectionService.js';
+export { getFooterShopInfo } from './shopService.js';
 export { getCategoryHierarchy } from './categoryService.js';
 export { getHomePageBanners } from './bannerService.js';
 export { searchProducts } from './searchService.js';

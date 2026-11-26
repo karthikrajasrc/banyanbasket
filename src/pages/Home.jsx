@@ -3,7 +3,6 @@ import CategoryShortcuts from '../components/home/CategoryShortcuts.jsx';
 import GroceryShelf from '../components/home/GroceryShelf.jsx';
 import Combos from '../components/home/Combos.jsx';
 import PantryStory from '../components/home/PantryStory.jsx';
-import TrustStrip from '../components/home/TrustStrip.jsx';
 import Testimonials from '../components/home/Testimonials.jsx';
 import { useCatalog } from '../context/CatalogContext.jsx';
 
@@ -22,7 +21,6 @@ export default function Home() {
       <GroceryShelf />
       <Combos />
       <PantryStory />
-      <TrustStrip />
       <Testimonials />
     </>
   );

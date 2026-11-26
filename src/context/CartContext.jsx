@@ -70,7 +70,7 @@ export function CartProvider({ children }) {
   const runOperation = useCallback((operation) => {
     busyCount.current += 1;
     setBusy(true);
-    serialize(operation)
+    return serialize(operation)
       .catch((error) => notify(error.message, 'error'))
       .finally(() => {
         busyCount.current -= 1;
@@ -91,7 +91,7 @@ export function CartProvider({ children }) {
       notify('This product variant is currently unavailable.', 'error');
       return;
     }
-    runOperation(async () => {
+    return runOperation(async () => {
       const line = { merchandiseId: requestedVariant.id, quantity };
       let current = cartRef.current;
       if (!current) {
