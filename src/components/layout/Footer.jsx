@@ -120,7 +120,7 @@ export default function Footer() {
         <div className="site-footer-grid">
           <section className="footer-column footer-brand" aria-label="Banyan Basket">
             <Link className="logo footer-logo" to="/" aria-label="Banyan Basket home">
-              <img src="/assets/logo.jpg" width="220" height="147" alt="Banyan Basket" />
+              <img src="/logo.webp" width="220" height="147" alt="Banyan Basket" />
             </Link>
             <p>
               Rooted in tradition and crafted with care, Banyan Basket brings

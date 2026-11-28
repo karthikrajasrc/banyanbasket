@@ -14,7 +14,7 @@ export default function About() {
             <h2 style={{ fontSize: 'clamp(26px,3.4vw,40px)', marginBottom: 16 }}>Rooted in tradition, grown for your family</h2>
             {aboutText.map((t) => <p key={t}>{t}</p>)}
           </div>
-          <img src="/assets/logo.jpg" alt="Banyan Basket logo – a banyan tree above the wordmark" width="760" height="507" />
+          <img src="/logo.webp" alt="Banyan Basket logo – a banyan tree above the wordmark" width="760" height="507" />
         </Reveal>
       </section>
       <Process />

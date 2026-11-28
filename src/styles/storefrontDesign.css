@@ -84,7 +84,7 @@ header.sc .top {
   gap: 16px;
   border: 1.5px solid rgba(119, 83, 48, .16);
   border-radius: 999px;
-  background: rgba(255, 254, 248, .97);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 2px 14px rgba(30, 74, 43, .06), 0 1px 3px rgba(30, 74, 43, .04);
@@ -103,7 +103,6 @@ header.sc .logo img {
   object-fit: contain;
   border-radius: 0;
   background: transparent;
-  mix-blend-mode: multiply;
 }
 
 nav.dk {
@@ -1635,6 +1634,7 @@ footer a,
 
   .top,
   header.sc .top {
+    position: relative;
     width: calc(100% - 20px);
     min-height: 58px;
     margin: 0 auto;
@@ -1651,16 +1651,19 @@ footer a,
     grid-row: 1;
   }
 
-  .logo {
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: center;
+  header .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
   }
 
   .logo img,
   header.sc .logo img {
     width: 72px;
     height: 46px;
+    margin-right: 57px;
   }
 
   nav.dk {
@@ -1670,6 +1673,7 @@ footer a,
   .acts {
     grid-column: 3;
     grid-row: 1;
+    z-index: 2;
     gap: 0;
   }
 
@@ -1681,7 +1685,7 @@ footer a,
 
   .category-shortcuts {
     width: 100%;
-    margin: 12px 0 10px;
+    margin: 12px 0 10px 10px;
     padding: 0 12px;
     justify-content: flex-start;
     gap: 12px;
@@ -3260,20 +3264,19 @@ footer a,
   min-height: 26px;
   align-items: center;
   gap: 7px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   font-family: Inter, sans-serif;
 }
 
 .grocery-shelf .category-rail-price-row b {
   display: inline-flex;
-  min-height: 26px;
   align-items: center;
   padding: 3px 8px;
   border: 1px solid var(--bb-primary-green);
   border-radius: 6px;
   background: var(--bb-primary-green);
   color: #fff;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -3288,14 +3291,13 @@ footer a,
 
 .grocery-shelf .category-rail-card h3 {
   display: -webkit-box;
-  min-height: 44px;
   margin-bottom: 6px;
   overflow: hidden;
   color: var(--bb-text-dark);
   font-family: Inter, sans-serif;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 16px;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
@@ -3336,10 +3338,7 @@ footer a,
 }
 
 .grocery-shelf .category-rail-card .grocery-add-button {
-  position: absolute;
-  z-index: 4;
-  top: calc(var(--category-rail-image-height) - 46px);
-  right: 8px;
+  position: static;
   display: inline-flex;
   width: auto;
   min-width: 60px;
@@ -3347,15 +3346,15 @@ footer a,
   align-items: center;
   justify-content: center;
   gap: 5px;
-  margin: 0;
+  margin: 6px 0 0;
   padding: 4px 9px;
   border: 1px solid var(--bb-primary-brown);
-  border-radius: 8px;
+  border-radius: 38px;
   background: var(--bb-primary-brown);
   color: #fff;
   font-family: Inter, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .grocery-shelf .category-rail-card .product-card-quantity-control {

@@ -103,19 +103,6 @@ export default function ProductCard({
           {badgeLabel}
         </span>
       )}
-      {showWishlist && (
-        <button
-          className={`grocery-wishlist-button${wishlisted ? ' is-wishlisted' : ''}`}
-          type="button"
-          aria-label={`${wishlisted ? 'Remove' : 'Add'} ${p.name} ${wishlisted ? 'from' : 'to'} wishlist`}
-          aria-pressed={wishlisted}
-          onClick={() => toggleWishlist(p.id || p.handle)}
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z" />
-          </svg>
-        </button>
-      )}
       <Link className="im" to={`/products/${p.handle}`} aria-label={p.name}>
         <span className="product-card-image-frame">
           <img className="product-card-primary-image" src={p.imageUrl} alt={p.imageAlt || p.name} loading="lazy" />

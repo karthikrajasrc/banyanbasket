@@ -14,7 +14,7 @@ export default function Header({ onMenu, onCart }) {
           <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
         </button>
         <Link className="logo" to="/" aria-label="Banyan Basket home">
-          <img src="/assets/logo.jpg" width="111" height="74" alt="Banyan Basket – Indian Grocery, Natural, Healthy Living, Organics" />
+          <img src="/logo.webp" width="111" height="74" alt="Banyan Basket – Indian Grocery, Natural, Healthy Living, Organics" />
         </Link>
         <DesktopNav />
         <div className="acts">
